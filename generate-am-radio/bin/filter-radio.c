@@ -34,7 +34,11 @@ int main (int argc, char *argv[]) {
         echo_fading_long_period = rand() % 50000 + 25000,
         echo_fading_extralong_period = rand() % 200000 + 150000;
   const int echo_size_samples = 1000;
-
+  
+  if (argc > 5) {
+    echo_level_mkv = (float) atof(argv[5]);
+  }
+  
   // Background signal
   float bg_signal_level_mkv = 0.2,
         bg_signal_fading_fast_period = rand() % 2000 + 1500,
@@ -42,6 +46,10 @@ int main (int argc, char *argv[]) {
         bg_signal_fading_long_period = rand() % 50000 + 25000,
         bg_signal_fading_extralong_period = rand() % 200000 + 150000;
 
+  if (argc > 6) {
+    bg_signal_level_mkv = (float) atof(argv[6]);
+  }
+  
   // Interference noise
   float interference_level_mkv = 0.02,
         interference_freq_factor = rand() % 1000 / 1000.0 * 3.0 + 1.0,
@@ -50,9 +58,17 @@ int main (int argc, char *argv[]) {
         interference_fading_long_period = rand() % 50000 + 25000,
         interference_fading_extralong_period = rand() % 200000 + 150000;
 
+  if (argc > 7) {
+    interference_level_mkv = (float) atof(argv[7]);
+  }
+  
   // White (or brown) noise
   float noise_level_mkv = 0.1;
 
+  if (argc > 8) {
+    noise_level_mkv = (float) atof(argv[8]);
+  }
+  
   // Vars
   // Signal component values
   float signal,
