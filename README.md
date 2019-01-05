@@ -1,10 +1,11 @@
 # old-radio-sound
-The server to emulate old warm AM radio sound on Raspberry Pi
+The server to emulate old warm AM radio sound (like Fallout styled)
 
 ### Docker containers
 
-All-in-One container (with icecast): [riftbit/fallout-radio](https://hub.docker.com/r/riftbit/fallout-radio)
-Only Streamer container (without icecast): [riftbit/icecast-retro-streamer](https://hub.docker.com/r/riftbit/icecast-retro-streamer)
+**All-in-One container (with icecast)**: [riftbit/fallout-radio](https://hub.docker.com/r/riftbit/fallout-radio)
+
+**Only Streamer container (without icecast)**: [riftbit/icecast-retro-streamer](https://hub.docker.com/r/riftbit/icecast-retro-streamer)
 
 ### Installation
 Install dependencies
